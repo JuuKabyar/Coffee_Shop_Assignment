@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bean Boutique</title>
+    <link rel="stylesheet" href="coffeeshop.css">
+</head>
+<body>
+    <section class="hero">
+        <header class="header">
+            <div class="navbar-container">
+                <div class="logo">
+                    <img src="Images/logo3.png" alt="Bean Boutique Coffee Shop">
+                </div>
+                <nav class="navbar">
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="coffeeSelection.html">Coffee Selection</a></li> 
+                        <li><a href="BrewingEquipment.html">Brewing Equipment</a></li> 
+                        <li><a href="ShoppingCart.html">Shopping Cart</a></li>
+                        <li><a href="EventsandWorkshops.html">Events & Workshops</a></li>
+                        <li><a href="SpecialOffersandSubscriptions.html">Special Offers and Subscriptions</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </div>
+
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Welcome to Bean Boutique!</h1>
+            <p>Discover the Art of Brewing with Our Premium Coffee Selection.</p>
+            <a href="coffeeSelection.html" class="hero-button">Explore Our Coffee</a> 
+        </div>
+    </section>
+     <!-- Popular Items Section -->
+     <section id="popular-items" class="popular-items">
+        <h2>Popular Items From Our Shop</h2>
+        <p>Explore our customers' top picks, celebrated for their unique flavors and exceptional quality.</p>
+        <div class="popular-cards">
+            <div class="popular-card">
+                <img src="Images/coffeebag1.jpg" alt="Ethiopian Yirgacheffe">
+                <h3>Espresso</h3>
+                <p>Espresso is loved for its strong, concentrated flavor and quick caffeine boost. It's also the base for many other coffee drinks.</p>
+                <div class="button-group">
+                    <a href="EspressoCoffeeDetails.html" class="btn btn-detail">View Details</a>
+                    <a href="ShoppingCart.html" class="btn">Buy Now</a>
+                </div>
+            </div>
+            <div class="popular-card">
+                <img src="Images/mocha2.jpg" alt="Kenyan AA">
+                    <h3>Mocha</h3>
+                    <p>The blend of chocolate and coffee in a mocha satisfies those with a sweet tooth while still delivering the rich flavors of coffee.</p>
+                    <div class="button-group">
+                        <a href="MochaCoffeeDetails.html" class="btn btn-detail">View Details</a>
+                        <a href="ShoppingCart.html" class="btn">Buy Now</a>
+                    </div>
+            </div>
+            <div class="popular-card">
+                <img src="Images/french_press2.jpg" alt="French Press">
+                <h3>French Press</h3>
+                <p>Experience rich, full-bodied coffee with our premium French Press.</p>
+                <div class="button-group">
+                    <a href="FrenchPressDetails.html" class="btn btn-detail">View Details</a>
+                    <a href="ShoppingCart.html" class="btn">Buy Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="discount-popup" class="popup-box">
+        <div class="popup-content">
+            <span class="close-btn" id="close-popup">&times;</span>
+            <h2>Discount 20% Off!</h2>
+            <p>Use code <strong>BEAN20</strong> at checkout to get 20% off your first order.</p>
+            <a href="coffeeSelection.html" class="popup-btn">Buy Now</a>
+        </div>
+    </div>
+    
+    <section id="location" class="map-section">
+        <div class="map-grid">
+            <div class="image-container">
+                <div class="slideshow">
+                    <img class="slides" src="Images/coffeeshop3.webp" alt="Bean Boutique Coffee Shop 1">
+                    <img class="slides" src="Images/coffeeshop1.jpg" alt="Bean Boutique Coffee Shop 2">
+                    <img class="slides" src="Images/coffeeshop2.jpg" alt="Bean Boutique Coffee Shop 3">
+                </div>
+            </div>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3819.1458088262143!2d96.12097707412778!3d16.819121118928976!2m3!1f0!2f0!3f0!3m2!1i1024!
+                2i768!4f13.1!3m2!1m1!2zMTbCsDQ5JzA4LjgiTiA5NsKwMDcnMjQuOCJF!5e0!3m2!1sen!2smm!4v1724248831210!5m2!1sen!2smm" 
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <div class="location-info">
+            <h2>Visit Our Coffee Shop</h2>
+            <p>We're located in the heart of the city, just a short walk from the main square.</p>
+            <address>
+                <p><strong>Bean Boutique Coffee Shop</strong></p>
+                <p>Han Thar Waddy Road</p>
+                <p>Kamaryut Township, Yangon</p>
+                <p><a href="tel:+1234567890">+959427533492</a></p>
+                <p><a href="mailto:info@beanboutique.com">info@beanboutique.com</a></p>
+            </address>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Bean Boutique. All rights reserved.</p>
+            <div class="social-media">
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Display the pop-up box when the page loads
+        window.onload = function() {
+            document.getElementById('discount-popup').style.display = 'block';
+        };
+    
+        // Close the pop-up box when the close button is clicked
+        document.getElementById('close-popup').onclick = function() {
+            document.getElementById('discount-popup').style.display = 'none';
+        };
+    </script>
+    
+    <script>
+        let slideIndex = 0;
+        showSlides();
+    
+        function showSlides() {
+            let slides = document.getElementsByClassName("slides");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            slides[slideIndex - 1].style.display = "block";  
+            setTimeout(showSlides, 3000); // Change image every 3 seconds
+        }
+    </script>
+</body>
+</html>
